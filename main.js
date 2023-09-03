@@ -29,9 +29,9 @@ function checkscore() {
   ];
   winningplace.forEach((array) => {
     // eslint-disable-next-line array-callback-return
-    const circlewins = array.every((cell) => {
-      return allsquer[cell].firstChild?.classList.contains('circle');
-    });
+    const circlewins = array.every((cell) =>
+      allsquer[cell].firstChild?.classList.contains('circle')
+    );
     if (circlewins) {
       info.textContent = 'circle wins';
       allsquer.forEach((square) => square.replaceWith(square.cloneNode(true)));
@@ -39,9 +39,9 @@ function checkscore() {
   });
   winningplace.forEach((array) => {
     // eslint-disable-next-line array-callback-return
-    const crosswins = array.every((cell) => {
-      return allsquer[cell].firstChild?.classList.contains('cross');
-    });
+    const crosswins = array.every((cell) =>
+      allsquer[cell].firstChild?.classList.contains('cross')
+    );
     if (crosswins) {
       info.textContent = 'cross wins';
       allsquer.forEach((square) => square.replaceWith(square.cloneNode(true)));
